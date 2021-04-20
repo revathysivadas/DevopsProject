@@ -2,12 +2,12 @@ package seleniumTest;
 
 
 
+import static org.testng.Assert.assertEquals;
+
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
-
-
 
 public class devopsproject {
 
@@ -22,10 +22,9 @@ public class devopsproject {
 	System.out.println("title of page is: " + driver.getTitle());
 	
 	String test = driver.findElement(By.tagName("b")).getText();
+	assertEquals(test, "about");
 	System.out.println(test);
-	  
 	System.out.println("Test Succeeded!!");
-	
 	driver.quit();
 	
 	} 
